@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # make sure to install these packages before running:
 # pip install pandas
 # pip install sodapy
@@ -19,7 +17,7 @@ client = Socrata("www.datos.gov.co", None)
 
 
 query = """
-SELECT DISTINCT nit_entidad, nombre_entidad, departamento, oden, sector, ciudad
+SELECT DISTINCT nombre_del_banco,tipo_de_cuenta,n_mero_de_cuenta
 """
 
 results = client.get("jbjy-vk9h", query=query)

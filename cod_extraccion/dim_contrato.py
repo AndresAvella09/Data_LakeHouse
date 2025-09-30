@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # make sure to install these packages before running:
 # pip install pandas
 # pip install sodapy
@@ -19,7 +17,7 @@ client = Socrata("www.datos.gov.co", None)
 
 
 query = """
-SELECT DISTINCT valor_del_contrato, valor_de_pago_adelantado, valor_facturado, valor_facturado, valor_pagado, 
+SELECT DISTINCT id_contrato,descripcion_del_proceso,estado_contrato,el_contrato_puede_ser_prorrogado,duraci_n_del_contrato,dias_adicionados,fecha_inicio_liquidacion,fecha_fin_liquidacion
 """
 
 results = client.get("jbjy-vk9h", query=query)
